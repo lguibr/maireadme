@@ -14,7 +14,7 @@ describe('Hardening: Coverage Gaps', () => {
     description: null,
     stargazers_count: 0,
     language: null,
-    topics: []
+    topics: [],
   };
 
   beforeEach(() => {
@@ -23,91 +23,93 @@ describe('Hardening: Coverage Gaps', () => {
 
   // Fetcher: Error Handling (Line 23)
   it('fetchRemoteFile should return undefined on error', async () => {
-      // Mock client to throw
-      const { octokit } = await import('../../src/api/client.js');
-      vi.spyOn(octokit.repos, 'getContent').mockRejectedValue(new Error('API Error'));
-      
-      const res = await fetcher.fetchRemoteFile('owner', 'repo', 'path');
-      expect(res).toBeUndefined();
+    // Mock client to throw
+    const { octokit } = await import('../../src/api/client.js');
+    vi.spyOn(octokit.repos, 'getContent').mockRejectedValue(new Error('API Error'));
+
+    const res = await fetcher.fetchRemoteFile('owner', 'repo', 'path');
+    expect(res).toBeUndefined();
   });
 
   // Categorizer: Default/Unknown (Line 17)
   it('categorizer should fallback to Other Experiments for unknown stack', () => {
-      const repo = { ...mockRepo, stack: { type: 'unknown', frameworks: [] } } as any;
-      const cat = categorizer.categorizeRepo(repo);
-      expect(cat).toBe('Other Experiments');
+    const repo = { ...mockRepo, stack: { type: 'unknown', frameworks: [] } } as any;
+    const cat = categorizer.categorizeRepo(repo);
+    expect(cat).toBe('Other Experiments');
   });
 
   it('categorizer should handle missing stack gracefully', () => {
-      const repo = { ...mockRepo, stack: undefined } as any;
-      const cat = categorizer.categorizeRepo(repo);
-      expect(cat).toBe('Other Experiments');
+    const repo = { ...mockRepo, stack: undefined } as any;
+    const cat = categorizer.categorizeRepo(repo);
+    expect(cat).toBe('Other Experiments');
   });
 
   // Badges: No stack (Line 21)
   it('badges should handle missing stack gracefully', () => {
-      const repo = { ...mockRepo, stack: undefined } as any;
-      const badgesHtml = badges.generateBadges(repo);
-      expect(badgesHtml).toContain('Stars');
-      expect(badgesHtml).not.toContain('Python');
+    const repo = { ...mockRepo, stack: undefined } as any;
+    const badgesHtml = badges.generateBadges(repo);
+    expect(badgesHtml).toContain('Stars');
+    expect(badgesHtml).not.toContain('Python');
   });
 
   // Badges: Unknown Stack (Line 21)
   it('badges should return empty string if no stack detected', () => {
-      const repo = { ...mockRepo, stack: undefined } as any;
-      const badgesHtml = badges.generateBadges(repo);
-      // It should still contain the stats badge
-      expect(badgesHtml).toContain('alt="Stars"');
+    const repo = { ...mockRepo, stack: undefined } as any;
+    const badgesHtml = badges.generateBadges(repo);
+    // It should still contain the stats badge
+    expect(badgesHtml).toContain('alt="Stars"');
   });
 
-   // Extractor: Line 17 (Regex loop or branch?)
-   // Assuming line 17 is related to filtering or loop
-   it('extractor should ignore lines starting with < (HTML)', async () => {
-       const readme = `
+  // Extractor: Line 17 (Regex loop or branch?)
+  // Assuming line 17 is related to filtering or loop
+  it('extractor should ignore lines starting with < (HTML)', async () => {
+    const readme = `
 # Title
 <div id="something"></div>
 This is a very real description that is definitely longer than twenty characters.
        `;
-       vi.spyOn(fetcher, 'fetchRemoteFile').mockResolvedValue(readme);
-       const desc = await extractDescriptionFromRemote(mockRepo);
-       expect(desc).toBe('This is a very real description that is definitely longer than twenty characters.');
-   });
+    vi.spyOn(fetcher, 'fetchRemoteFile').mockResolvedValue(readme);
+    const desc = await extractDescriptionFromRemote(mockRepo);
+    expect(desc).toBe(
+      'This is a very real description that is definitely longer than twenty characters.',
+    );
+  });
 
-   it('fetcher should return undefined if content is not string or missing', async () => {
-        const { octokit } = await import('../../src/api/client.js');
-        // Mock successful call but invalid response structure
-        vi.spyOn(octokit.repos, 'getContent').mockResolvedValue({ 
-            data: { }, // missing content
-        } as any);
-        
-        const res = await fetcher.fetchRemoteFile('owner', 'repo', 'path');
-        expect(res).toBeUndefined();
-   });
+  it('fetcher should return undefined if content is not string or missing', async () => {
+    const { octokit } = await import('../../src/api/client.js');
+    // Mock successful call but invalid response structure
+    vi.spyOn(octokit.repos, 'getContent').mockResolvedValue({
+      data: {}, // missing content
+    } as any);
 
-   it('analyzer should detect "library" type for minimal dependencies', async () => {
-        const { detectStackFromRemote } = await import('../../src/core/analyzer.js');
-        vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (_, __, path) => {
-            if (path === 'package.json') {
-                return JSON.stringify({ dependencies: { 'lodash': '1.0' } });
-            }
-            return undefined;
-        });
+    const res = await fetcher.fetchRemoteFile('owner', 'repo', 'path');
+    expect(res).toBeUndefined();
+  });
 
-        const stack = await detectStackFromRemote(mockRepo);
-        expect(stack.type).toBe('library');
-   });
+  it('analyzer should detect "library" type for minimal dependencies', async () => {
+    const { detectStackFromRemote } = await import('../../src/core/analyzer.js');
+    vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (_, __, path) => {
+      if (path === 'package.json') {
+        return JSON.stringify({ dependencies: { lodash: '1.0' } });
+      }
+      return undefined;
+    });
 
-   it('readme should format tags correctly', async () => {
-       const { generateHTML } = await import('../../src/generators/readme.js');
-       const repo = {
-           ...mockRepo,
-           category: 'Other Experiments',
-           topics: ['t1', 't2'],
-           stack: { frameworks: ['f1'] }
-       } as any;
-       
-       const html = generateHTML([repo]);
-       expect(html).toContain('<code>t1</code>');
-       expect(html).toContain('<code>f1</code>');
-   });
+    const stack = await detectStackFromRemote(mockRepo);
+    expect(stack.type).toBe('library');
+  });
+
+  it('readme should format tags correctly', async () => {
+    const { generateHTML } = await import('../../src/generators/readme.js');
+    const repo = {
+      ...mockRepo,
+      category: 'Other Experiments',
+      topics: ['t1', 't2'],
+      stack: { frameworks: ['f1'] },
+    } as any;
+
+    const html = generateHTML([repo]);
+    expect(html).toContain('<code>t1</code>');
+    expect(html).toContain('<code>f1</code>');
+  });
 });

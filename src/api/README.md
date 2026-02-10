@@ -16,11 +16,11 @@ graph TD
 
 ## 📦 Components
 
-| File | Description |
-|------|-------------|
-| [`client.ts`](./client.ts) | **Authentication**: Initializes Octokit with `GITHUB_TOKEN`. Handles rate limiting and environment configuration. |
+| File                         | Description                                                                                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| [`client.ts`](./client.ts)   | **Authentication**: Initializes Octokit with `GITHUB_TOKEN`. Handles rate limiting and environment configuration.        |
 | [`fetcher.ts`](./fetcher.ts) | **Data Retrieval**: Fetches raw file content (READMEs, `package.json`, etc.) with robust error handling and null safety. |
-| [`types.ts`](./types.ts) | **Type Definitions**: Exports strict TypeScript interfaces for GitHub API responses (`GithubRepo`, `GithubUser`). |
+| [`types.ts`](./types.ts)     | **Type Definitions**: Exports strict TypeScript interfaces for GitHub API responses (`GithubRepo`, `GithubUser`).        |
 
 ## 🔧 Usage
 
@@ -29,6 +29,6 @@ import { fetchRemoteFile } from './fetcher.js';
 
 const content = await fetchRemoteFile('owner', 'repo', 'README.md');
 if (content) {
-  console.log("README found!");
+  console.log('README found!');
 }
 ```

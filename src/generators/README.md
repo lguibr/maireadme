@@ -16,9 +16,9 @@ graph TD
 
 ## 📦 Components
 
-| File | Description |
-|------|-------------|
-| [`badges.ts`](./badges.ts) | **Badge Engine**: Generates Shields.io badges for stars, languages, frameworks (React, Go, etc.), and **Cocov** coverage. |
+| File                       | Description                                                                                                                             |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [`badges.ts`](./badges.ts) | **Badge Engine**: Generates Shields.io badges for stars, languages, frameworks (React, Go, etc.), and **Cocov** coverage.               |
 | [`readme.ts`](./readme.ts) | **Layout Engine**: Renders the "Product Landing" style table layout, grouping repositories by category and injecting descriptions/tags. |
 
 ## 🔧 Usage

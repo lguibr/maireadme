@@ -1,6 +1,6 @@
-import { Octokit } from "@octokit/rest";
-import dotenv from "dotenv";
-import chalk from "chalk";
+import { Octokit } from '@octokit/rest';
+import dotenv from 'dotenv';
+import chalk from 'chalk';
 
 /* v8 ignore start */
 if (process.env.NODE_ENV !== 'test') {
@@ -11,7 +11,7 @@ if (process.env.NODE_ENV !== 'test') {
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 if (!GITHUB_TOKEN) {
-  console.warn(chalk.yellow("Warning: GITHUB_TOKEN not found in .env. API rate limits may apply."));
+  console.warn(chalk.yellow('Warning: GITHUB_TOKEN not found in .env. API rate limits may apply.'));
 }
 
 /**

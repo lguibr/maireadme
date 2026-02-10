@@ -7,7 +7,13 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vitest](https://img.shields.io/badge/Tested%20with-Vitest-success?logo=vitest&logoColor=white)](https://vitest.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
+<!-- COCOV_BADGES_START -->
+
+[![Lines](https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/lines-100.svg)](https://github.com/lguibr/cocov) [![Statements](https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/statements-100.svg)](https://github.com/lguibr/cocov) [![Functions](https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/functions-100.svg)](https://github.com/lguibr/cocov) [![Branches](https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/branches-100.svg)](https://github.com/lguibr/cocov)
+
+<!-- COCOV_BADGES_END -->](./CONTRIBUTING.md)
 
 </div>
 

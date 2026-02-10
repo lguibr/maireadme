@@ -1,4 +1,4 @@
-import { GithubRepo } from "../api/types.js";
+import { GithubRepo } from '../api/types.js';
 
 /**
  * Represents the detected technology stack of a repository.
@@ -7,12 +7,12 @@ export interface RepoStack {
   /**
    * High-level type of the project.
    */
-  type: "frontend" | "backend" | "fullstack" | "library" | "unknown";
+  type: 'frontend' | 'backend' | 'fullstack' | 'library' | 'unknown';
   /**
    * List of detecting dependencies (e.g. 'react', 'express').
    */
   dependencies: string[];
-   /**
+  /**
    * List of detected dev dependencies.
    */
   devDependencies?: string[];

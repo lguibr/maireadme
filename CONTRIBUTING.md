@@ -19,10 +19,10 @@
 
 We strictly enforce high code quality standards. Before submitting a PR, ensure:
 
--   **Tests**: run `npm test` and ensure 100% pass rate.
--   **Linting**: run `npm run lint` to catch style issues.
--   **Types**: run `npm run typecheck` to verify strict TypeScript compliance.
--   **Docs**: If you add a feature, update the relevant `README.md` and TSDoc.
+- **Tests**: run `npm test` and ensure 100% pass rate.
+- **Linting**: run `npm run lint` to catch style issues.
+- **Types**: run `npm run typecheck` to verify strict TypeScript compliance.
+- **Docs**: If you add a feature, update the relevant `README.md` and TSDoc.
 
 ## 提交 Pull Request
 
@@ -33,8 +33,8 @@ We strictly enforce high code quality standards. Before submitting a PR, ensure:
 
 ## 📝 Coding Style
 
--   **TypeScript**: Strict mode enabled. No `any`.
--   **Formatting**: We use Prettier.
--   **Commits**: Use conventional commits (e.g., `feat: add new generator`, `fix: resolve import error`).
+- **TypeScript**: Strict mode enabled. No `any`.
+- **Formatting**: We use Prettier.
+- **Commits**: Use conventional commits (e.g., `feat: add new generator`, `fix: resolve import error`).
 
 Thank you for contributing! 🌟

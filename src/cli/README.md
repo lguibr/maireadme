@@ -17,9 +17,9 @@ graph TD
 
 ## 📦 Components
 
-| File | Description |
-|------|-------------|
-| [`main.ts`](./main.ts) | **Entry Point**: The executable script. Initializes the CLI, displays the ASCII art banner, and triggers the interactive flow. |
+| File                                 | Description                                                                                                                                        |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`main.ts`](./main.ts)               | **Entry Point**: The executable script. Initializes the CLI, displays the ASCII art banner, and triggers the interactive flow.                     |
 | [`interactive.ts`](./interactive.ts) | **User Interaction**: Manages the prompt loop using `inquirer`. Handles username input, repository selection (checklist), and manual descriptions. |
 
 ## 🔧 Usage

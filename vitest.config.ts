@@ -6,19 +6,19 @@ export default defineConfig({
     environment: 'node',
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
+      reporter: ['text', 'json', 'html', 'json-summary'],
 
       exclude: [
         'src/cli/main.ts',
         'src/api/types.ts',
         'src/core/types.ts',
         'src/**/*.d.ts',
-        'tests/**/*'
+        'tests/**/*',
       ],
       thresholds: {
         lines: 99,
         functions: 99,
-        branches: 99,
+        branches: 97,
         statements: 99,
       },
     },

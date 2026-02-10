@@ -16,12 +16,12 @@ graph TD
 
 ## 📦 Components
 
-| File | Description |
-|------|-------------|
-| [`analyzer.ts`](./analyzer.ts) | **Stack Detection**: Analyzes `package.json`, `go.mod`, and `pyproject.toml` to identify frameworks, languages, and internal dependencies. |
-| [`categorizer.ts`](./categorizer.ts) | **Classification**: Assigns repositories to high-level categories (e.g., "AI & Python", "Frontend") based on their tech stack. |
-| [`extractor.ts`](./extractor.ts) | **Content Extraction**: Intelligently parses remote READMEs to extract meaningful descriptions, ignoring badges and headers. |
-| [`types.ts`](./types.ts) | **Domain Models**: Defines the `EnhancedRepo` and `RepoStack` interfaces used throughout the application. |
+| File                                 | Description                                                                                                                                |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`analyzer.ts`](./analyzer.ts)       | **Stack Detection**: Analyzes `package.json`, `go.mod`, and `pyproject.toml` to identify frameworks, languages, and internal dependencies. |
+| [`categorizer.ts`](./categorizer.ts) | **Classification**: Assigns repositories to high-level categories (e.g., "AI & Python", "Frontend") based on their tech stack.             |
+| [`extractor.ts`](./extractor.ts)     | **Content Extraction**: Intelligently parses remote READMEs to extract meaningful descriptions, ignoring badges and headers.               |
+| [`types.ts`](./types.ts)             | **Domain Models**: Defines the `EnhancedRepo` and `RepoStack` interfaces used throughout the application.                                  |
 
 ## 🔧 Usage
 

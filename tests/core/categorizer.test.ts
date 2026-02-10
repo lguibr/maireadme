@@ -7,7 +7,7 @@ describe('Categorizer', () => {
     const repo: EnhancedRepo = {
       name: 'test-py',
       language: 'Python',
-      stack: { frameworks: ['Python'], dependencies: [], type: 'backend' }
+      stack: { frameworks: ['Python'], dependencies: [], type: 'backend' },
     } as any;
     expect(categorizeRepo(repo)).toBe('AI & Python Engineering');
   });
@@ -16,7 +16,7 @@ describe('Categorizer', () => {
     const repo: EnhancedRepo = {
       name: 'test-go',
       language: 'Go',
-      stack: { frameworks: ['Go'], dependencies: [], type: 'backend' }
+      stack: { frameworks: ['Go'], dependencies: [], type: 'backend' },
     } as any;
     expect(categorizeRepo(repo)).toBe('System & Backend (Go)');
   });
@@ -25,7 +25,7 @@ describe('Categorizer', () => {
     const repo: EnhancedRepo = {
       name: 'test-react',
       language: 'TypeScript',
-      stack: { frameworks: ['React', 'Next.js'], dependencies: [], type: 'frontend' }
+      stack: { frameworks: ['React', 'Next.js'], dependencies: [], type: 'frontend' },
     } as any;
     expect(categorizeRepo(repo)).toBe('Frontend & Fullstack');
   });
@@ -34,7 +34,7 @@ describe('Categorizer', () => {
     const repo: EnhancedRepo = {
       name: 'test-cpp',
       language: 'C++',
-      stack: { frameworks: [], dependencies: [], type: 'unknown' }
+      stack: { frameworks: [], dependencies: [], type: 'unknown' },
     } as any;
     expect(categorizeRepo(repo)).toBe('High Performance & Systems');
   });
@@ -43,7 +43,7 @@ describe('Categorizer', () => {
     const repo: EnhancedRepo = {
       name: 'test-unknown',
       language: 'Java',
-      stack: { frameworks: [], dependencies: [], type: 'unknown' }
+      stack: { frameworks: [], dependencies: [], type: 'unknown' },
     } as any;
     expect(categorizeRepo(repo)).toBe('Other Experiments');
   });

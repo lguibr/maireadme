@@ -11,7 +11,7 @@ describe('Extractor', () => {
     description: null,
     stargazers_count: 0,
     language: null,
-    topics: []
+    topics: [],
   };
 
   beforeEach(() => {
@@ -34,21 +34,21 @@ This is a real description that is long enough to be picked up by the extractor 
  It continues here.
     `;
     vi.spyOn(fetcher, 'fetchRemoteFile').mockResolvedValue(readme);
-    
+
     const desc = await extractDescriptionFromRemote(mockRepo);
     expect(desc).toContain('This is a real description');
   });
 
   it('should ignore short lines', async () => {
-      const readme = `
+    const readme = `
 # Title
 Short.
 Too short.
 This line is definitely long enough to be considered a proper description of the project.
       `;
-      vi.spyOn(fetcher, 'fetchRemoteFile').mockResolvedValue(readme);
-      const desc = await extractDescriptionFromRemote(mockRepo);
-      expect(desc).toContain('This line is definitely long');
+    vi.spyOn(fetcher, 'fetchRemoteFile').mockResolvedValue(readme);
+    const desc = await extractDescriptionFromRemote(mockRepo);
+    expect(desc).toContain('This line is definitely long');
   });
 
   it('should ignore badges, html, and links', async () => {

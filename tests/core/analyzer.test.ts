@@ -11,7 +11,7 @@ describe('Analyzer', () => {
     description: null,
     stargazers_count: 0,
     language: null,
-    topics: []
+    topics: [],
   };
 
   beforeEach(() => {
@@ -22,7 +22,7 @@ describe('Analyzer', () => {
     vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (owner, repo, path) => {
       if (path === 'package.json') {
         return JSON.stringify({
-          dependencies: { 'react': '18.0.0', 'next': '13.0.0' }
+          dependencies: { react: '18.0.0', next: '13.0.0' },
         });
       }
       return undefined;
@@ -38,51 +38,53 @@ describe('Analyzer', () => {
     vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (owner, repo, path) => {
       if (path === 'package.json') {
         return JSON.stringify({
-          dependencies: { '@nestjs/core': '9.0.0', 'nestjs': '9.0.0' } // logic checks for 'nestjs' key in deps keys
+          dependencies: { '@nestjs/core': '9.0.0', nestjs: '9.0.0' }, // logic checks for 'nestjs' key in deps keys
         });
       }
       return undefined;
     });
 
     const stack = await detectStackFromRemote(mockRepo);
-    // The current logic checks if 'nestjs' is in keys. 
+    // The current logic checks if 'nestjs' is in keys.
     // Let's ensure our logic matches the test case or vice versa.
     // Logic: if (depKeys.includes("nestjs")) ...
-    
+
     expect(stack.type).toBe('backend');
     expect(stack.frameworks).toContain('NestJS');
-    
+
     // Explicit check for 'express' case to hit that branch
-    vi.spyOn(fetcher, 'fetchRemoteFile').mockResolvedValue(JSON.stringify({ dependencies: { 'express': '4.0.0' } }));
+    vi.spyOn(fetcher, 'fetchRemoteFile').mockResolvedValue(
+      JSON.stringify({ dependencies: { express: '4.0.0' } }),
+    );
     const stackExpress = await detectStackFromRemote(mockRepo);
     expect(stackExpress.frameworks).toContain('Express');
   });
 
   it('should detect internal dependencies', async () => {
-      vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (owner, repo, path) => {
-          if (path === 'package.json') {
-              return JSON.stringify({
-                  dependencies: { 'react': '18.0', 'my-lib': '1.0' }
-              });
-          }
-          return undefined;
-      });
+    vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (owner, repo, path) => {
+      if (path === 'package.json') {
+        return JSON.stringify({
+          dependencies: { react: '18.0', 'my-lib': '1.0' },
+        });
+      }
+      return undefined;
+    });
 
-      const allRepos = ['my-lib', 'other-repo'];
-      const stack = await detectStackFromRemote(mockRepo, allRepos);
-      
-      expect(stack.internalDependencies).toBeDefined();
-      expect(stack.internalDependencies).toContain('my-lib');
-      expect(stack.internalDependencies).not.toContain('other-repo');
+    const allRepos = ['my-lib', 'other-repo'];
+    const stack = await detectStackFromRemote(mockRepo, allRepos);
+
+    expect(stack.internalDependencies).toBeDefined();
+    expect(stack.internalDependencies).toContain('my-lib');
+    expect(stack.internalDependencies).not.toContain('other-repo');
   });
-  
+
   it('should handle invalid package.json gracefully', async () => {
-      vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (owner, repo, path) => {
-          if (path === 'package.json') return '{ invalid json ';
-          return undefined;
-      });
-      const stack = await detectStackFromRemote(mockRepo);
-      expect(stack.type).toBe('unknown');
+    vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (owner, repo, path) => {
+      if (path === 'package.json') return '{ invalid json ';
+      return undefined;
+    });
+    const stack = await detectStackFromRemote(mockRepo);
+    expect(stack.type).toBe('unknown');
   });
 
   it('should detect Python from pyproject.toml', async () => {
