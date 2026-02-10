@@ -1,8 +1,8 @@
 # 📂 Source Code Structure
 
-> **LGUIBR Core Architecture**
+> **MAIREADME Core Architecture**
 
-Welcome to the source code of **LGUIBR**. This project follows a modular, domain-driven architecture to ensure scalability, maintainability, and testability.
+Welcome to the source code of **MAIREADME**. This project follows a modular, domain-driven architecture to ensure scalability, maintainability, and testability.
 
 ## 🗺️ Module Map
 

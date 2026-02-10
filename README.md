@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 LGUIBR
+<img src="https://raw.githubusercontent.com/lguibr/maireadme/main/src/logo.png" height="80" style="max-width: 160px; padding: 10px;" alt="Maireadme Logo" />
 
 ### The Ultimate GitHub README Generator
 
@@ -15,7 +15,7 @@
 
 ## 📖 Overview
 
-**LGUIBR** is a sophisticated CLI tool designed to automatically generate high-fidelity, "State-of-the-Art" (SOTA) READMEs for your GitHub profile. It intelligently analyzes your repositories, detects technology stacks (Node.js, Python, Go, etc.), and renders a beautiful, structured table of your projects.
+**MAIREADME** is a sophisticated CLI tool designed to automatically generate high-fidelity, "State-of-the-Art" (SOTA) READMEs for your GitHub profile. It intelligently analyzes your repositories, detects technology stacks (Node.js, Python, Go, etc.), and renders a beautiful, structured table of your projects.
 
 ### ✨ Key Features
 
@@ -30,8 +30,8 @@
 ### Installation
 
 ```bash
-git clone https://github.com/lguibr/lguibr.git
-cd lguibr
+git clone https://github.com/lguibr/maireadme.git
+cd maireadme
 npm install
 ```
 

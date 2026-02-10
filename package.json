@@ -1,7 +1,7 @@
 {
-  "name": "lguibr",
+  "name": "maireadme",
   "version": "1.0.0",
-  "description": "<table width=\"100%\">   <tr style=\"border-bottom: none;\">     <td width=\"20%\" align=\"center\" valign=\"middle\" style=\"border-right: 1px solid #eee;\">       <a href=\"https://github.com/lguibr/commitai\"> <img src=\"https://raw.githubusercontent.com/lguibr/commitai/main/bitmap.png\" height=\"80\" style=\"max-width: 160px; padding: 10px;\" alt=\"CommitAI Logo\" /> </a>     </td>     <td width=\"80%\" align=\"left\" valign=\"top\">       <div align=\"center\">         <a href=\"https://github.com/lguibr/commitai\">           <img src=\"https://img.shields.io/github/stars/lguibr/commitai?style=social\" alt=\"Stars\" />         </a>         <a href=\"https://pypi.org/project/commitai/\">           <img src=\"https://img.shields.io/pypi/v/commitai?style=social&logo=pypi&logoColor=white\" alt=\"PyPI\" />         </a>         <img src=\"https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white\" alt=\"Python\" />       </div>       <p align=\"center\">         <strong>commitai</strong>         <br />         <b>CommitAi</b> streamlines your Git workflow by leveraging powerful AI models to automatically generate clear, concise, and conventional commit messages based on your staged changes.       </p>       <p align=\"center\"><code>LangChain</code> <code>CLI</code> <code>GIT</code></p>     </td>   </tr>",
+  "description": "<table width=\"100%\">   <tr style=\"border-bottom: none;\">     <td width=\"20%\" align=\"center\" valign=\"middle\" style=\"border-right: 1px solid #eee;\">       <a href=\"https://github.com/lguibr/maireadme\"> <img src=\"https://raw.githubusercontent.com/lguibr/maireadme/main/bitmap.png\" height=\"80\" style=\"max-width: 160px; padding: 10px;\" alt=\"Maireadme Logo\" /> </a>     </td>     <td width=\"80%\" align=\"left\" valign=\"top\">       <div align=\"center\">         <a href=\"https://github.com/lguibr/maireadme\">           <img src=\"https://img.shields.io/github/stars/lguibr/maireadme?style=social\" alt=\"Stars\" />         </a>         <a href=\"https://pypi.org/project/maireadme/\">           <img src=\"https://img.shields.io/pypi/v/maireadme?style=social&logo=pypi&logoColor=white\" alt=\"PyPI\" />         </a>         <img src=\"https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white\" alt=\"Python\" />       </div>       <p align=\"center\">         <strong>maireadme</strong>         <br />         <b>Maireadme</b> streamlines your Git workflow by leveraging powerful AI models to automatically generate clear, concise, and conventional commit messages based on your staged changes.       </p>       <p align=\"center\"><code>LangChain</code> <code>CLI</code> <code>GIT</code></p>     </td>   </tr>",
   "main": "index.js",
   "scripts": {
     "test": "vitest run",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lguibr/lguibr.git"
+    "url": "git+https://github.com/lguibr/maireadme.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lguibr/lguibr/issues"
+    "url": "https://github.com/lguibr/maireadme/issues"
   },
-  "homepage": "https://github.com/lguibr/lguibr#readme",
+  "homepage": "https://github.com/lguibr/maireadme#readme",
   "dependencies": {
     "@octokit/rest": "^22.0.1",
     "@types/inquirer": "^9.0.9",
