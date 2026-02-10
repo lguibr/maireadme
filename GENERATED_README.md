@@ -1,4 +1,4 @@
-<div align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=4285F4&width=435&lines=Initializing%20Maireadme%20Protocol...;Scanning%2023%20Repositories%20for%20Knowledge%20Items...;Establishing%20Neural%20Uplink%20(Gemini%201.5%20Pro)...;Processing%20Context%20Window%3A%202%2C000%2C000%20Tokens...;Architectural%20Pattern%20Matching%3A%20ACTIVE;Synthesizing%20SOTA%20Documentation...;Welcome%20to%20my%20Digital%20Workspace." alt="Typing SVG" /></div><br/>
+<div align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=4285F4&width=435&lines=Initializing%20Maireadme%20Protocol...;Scanning%2022%20Repositories%20for%20Knowledge%20Items...;Establishing%20Neural%20Uplink%20(Gemini%201.5%20Pro)...;Processing%20Context%20Window%3A%202%2C000%2C000%20Tokens...;Architectural%20Pattern%20Matching%3A%20ACTIVE;Synthesizing%20SOTA%20Documentation...;Welcome%20to%20my%20Digital%20Workspace." alt="Typing SVG" /></div><br/>
 <table width="100%">
 <tr style="border-bottom: none; ">
 <td width="20%" align="center" valign="middle" style="border-right: 1px solid #eee; ">
@@ -329,20 +329,5 @@
     The core logic for the Triangle Puzzle game. Features a fast C++ backend, Pybind11 wrappers, and a Python API designed for AI/ML development and simulation.
   </p>
   <p align="center"><code>c-plus-plus</code> <code>cpp</code> <code>game-engine</code> <code>library</code> <code>performance</code> <code>puzzle-game</code> <code>pybind11</code> <code>pygame</code> <code>python</code> <code>reinforcement-learning</code> <code>rl</code> <code>Python</code></p>
-</td>
-</tr><tr style="border-bottom: none; ">
-<td width="20%" align="center" valign="middle" style="border-right: 1px solid #eee; ">
-  <a href="https://github.com/lguibr/RepoConcat">
-    <img src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" height="80" style="max-width: 160px; padding: 10px;" alt="RepoConcat Logo" />
-  </a>
-</td>
-<td width="80%" align="left" valign="top">
-  <a href="https://github.com/lguibr/RepoConcat"><img src="https://img.shields.io/github/stars/lguibr/RepoConcat?style=social" alt="Stars" /></a> <a href="https://github.com/lguibr/RepoConcat"><img src="https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white" alt="TypeScript" /></a>
-  <p align="center">
-    <strong>RepoConcat</strong>
-    <br />
-    RepoConcat Concat your repo in a single markdown
-  </p>
-  <p align="center"><code>React</code></p>
 </td>
 </tr></table>
