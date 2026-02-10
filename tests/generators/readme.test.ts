@@ -42,7 +42,7 @@ describe('README Generator', () => {
         description: 'Frontend Repo',
         html_url: 'https://github.com/u/frontend-repo',
         tags: ['React'],
-        badges: [],
+        badges: [{ label: 'Build', image: 'https://img.shields.io/build', url: 'https://ci.com' }],
         isChild: false,
       },
     ];
@@ -51,6 +51,22 @@ describe('README Generator', () => {
     // expect(html).toContain('### AI & Python Engineering'); // likely fails if logic removed
     expect(html).toContain('ai-repo');
     expect(html).toContain('frontend-repo');
+  });
+
+  it('should apply child project styling', () => {
+    const projects = [
+      {
+        name: 'child-repo',
+        description: 'Child',
+        html_url: '...',
+        tags: [],
+        badges: [],
+        isChild: true,
+      },
+    ];
+    const html = generateHTML({ projects });
+    expect(html).toContain('padding-left: 40px');
+    expect(html).toContain('max-width: 100px');
   });
 
   it('should handle uncategorized repos', () => {

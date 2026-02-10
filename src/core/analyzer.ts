@@ -211,9 +211,9 @@ function resolveRelativeUrl(url: string, repo: GithubRepo): string {
 
 export function extractCocovBadgeFromReadme(content: string): string | null {
   // Look for: pattern like raw.githubusercontent.com/.../assets/badges/lines-*.svg
-  // Example: https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/lines-94.svg
-  // Or just any .svg in assets/badges/lines
-  const regex = /https:\/\/raw\.githubusercontent\.com\/[^)]+\/assets\/badges\/lines-[^)]+\.svg/i;
+  // OR the new vercel app url
+  const regex =
+    /(https:\/\/raw\.githubusercontent\.com\/[^)]+\/assets\/badges\/lines-[^)]+\.svg|https:\/\/cocov\.vercel\.app\/api\/badge\/[^\s"')\]]+)/i;
   const match = content.match(regex);
   return match ? match[0] : null;
 }

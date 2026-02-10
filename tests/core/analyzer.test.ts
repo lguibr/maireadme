@@ -35,6 +35,35 @@ describe('Analyzer', () => {
     expect(stack.frameworks).toContain('Next.js');
   });
 
+  it('should extract logo and cocov badge from README', async () => {
+    vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (owner, repo, file) => {
+      if (file === 'README.md') {
+        return '# README\n![logo](logo.png)\n[![cocov](https://cocov.vercel.app/api/badge/owner/repo)](https://cocov.vercel.app/owner/repo)';
+      }
+      if (file === 'package.json') {
+        return JSON.stringify({
+          dependencies: { react: '18.0.0' },
+          devDependencies: { typescript: '5.0.0' },
+        });
+      }
+      return undefined;
+    });
+
+    const stack = await detectStackFromRemote({ ...mockRepo, name: 'logo-repo' }, []);
+
+    expect(stack.logoUrl).toBeDefined();
+    expect(stack.logoUrl).toContain('logo.png');
+    expect((stack as any).cocovBadgeUrl).toBeDefined();
+    expect((stack as any).cocovBadgeUrl).toContain('owner/repo');
+  });
+
+  it('should handle package.json with no dependencies', async () => {
+    vi.spyOn(fetcher, 'fetchRemoteFile').mockResolvedValue(JSON.stringify({ name: 'no-deps' }));
+    const stack = await detectStackFromRemote(mockRepo);
+    expect(stack.dependencies).toEqual([]);
+    expect(stack.devDependencies).toEqual([]);
+  });
+
   it('should detect NestJS backend stack from package.json', async () => {
     vi.spyOn(fetcher, 'fetchRemoteFile').mockImplementation(async (owner, repo, path) => {
       if (path === 'package.json') {

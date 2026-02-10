@@ -85,4 +85,16 @@ describe('Badge Generator', () => {
     } as any;
     expect(generateBadges(repo)).toContain('badge/Go');
   });
+
+  it('should include Cocov badge if dependency is present', () => {
+    const repo: EnhancedRepo = {
+      name: 'cocov-repo',
+      html_url: '...',
+      owner: { login: 'user' },
+      stack: { frameworks: [], type: 'library', dependencies: ['cocov'] },
+    } as any;
+    const html = generateBadges(repo);
+    expect(html).toContain('alt="Cocov"');
+    expect(html).toContain('https://cocov.vercel.app');
+  });
 });
