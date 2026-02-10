@@ -63,24 +63,22 @@ export function generateHTML(repos: EnhancedRepo[]): string {
         descHtml += `<br/><br/><strong>Integrates with:</strong> ${links}`;
       }
 
-      html += `
-      <tr style="border-bottom: none;">
-        <td width="20%" align="center" valign="middle" style="border-right: 1px solid #eee;">
-          <a href="${repo.html_url}">
-            <img src="${logoUrl}" height="80" style="max-width: 160px; padding: 10px;" alt="${repo.name} Logo" />
-          </a>
-        </td>
-        <td width="80%" align="left" valign="top">
-          ${generateBadges(repo)}
-          <p align="center">
-            <strong>${repo.name}</strong>
-            <br />
-            ${descHtml}
-          </p>
-          <p align="center">${tags}</p>
-        </td>
-      </tr>
-    `;
+      html += `<tr style="border-bottom: none;">
+<td width="20%" align="center" valign="middle" style="border-right: 1px solid #eee;">
+  <a href="${repo.html_url}">
+    <img src="${logoUrl}" height="80" style="max-width: 160px; padding: 10px;" alt="${repo.name} Logo" />
+  </a>
+</td>
+<td width="80%" align="left" valign="top">
+  ${generateBadges(repo)}
+  <p align="center">
+    <strong>${repo.name}</strong>
+    <br />
+    ${descHtml}
+  </p>
+  <p align="center">${tags}</p>
+</td>
+</tr>`;
     }
     html += `</table>\n\n`;
   }

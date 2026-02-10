@@ -82,12 +82,14 @@ async function main() {
   console.log(chalk.blue('Generating HTML...'));
   const html = generateHTML(selectedRepos);
 
-  const outputPath = 'README.md';
+  const outputPath = 'GENERATED_README.md';
   fs.writeFileSync(outputPath, html);
   console.log(chalk.green(`\nSuccess! README.md generated at ${outputPath}`));
 }
 
-if (require.main === module) {
+import { fileURLToPath } from 'url';
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   /* v8 ignore next 3 */
   main().catch((err) => {
     console.error(chalk.red('Fatal Error:'), err);
