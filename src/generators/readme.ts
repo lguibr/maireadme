@@ -1,87 +1,55 @@
-import { EnhancedRepo } from '../core/types.js';
-import { generateBadges } from './badges.js';
+import { ReadmeData } from '../core/schema.js';
 
 /**
  * Generates the final README.md HTML content.
- *
- * Groups repositories by category and renders them in a table format.
- *
- * @param repos - List of enhanced repositories.
- * @returns The complete HTML string.
+ * Renders a single flat table with hierarchical grouping from the deterministic JSON data.
  */
-export function generateHTML(repos: EnhancedRepo[]): string {
-  // Group by category
-  const groups: Record<string, EnhancedRepo[]> = {};
-  const categories = [
-    'AI & Python Engineering',
-    'System & Backend (Go)',
-    'Frontend & Fullstack',
-    'High Performance & Systems',
-    'Other Experiments',
-  ];
+export function generateHTML(data: ReadmeData): string {
+  let html = `<table width="100%">\n`;
 
-  for (const repo of repos) {
-    const cat = repo.category || 'Other Experiments';
-    /* v8 ignore start */
-    if (!groups[cat]) groups[cat] = [];
-    /* v8 ignore stop */
-    groups[cat].push(repo);
-  }
+  for (const project of data.projects) {
+    const { isChild, logoUrl, html_url, name, description, tags, badges, integrations } = project;
 
-  let html = '';
+    // 1. Tags
+    const tagsHtml = tags.map((t) => `<code>${t}</code>`).join(' ');
 
-  for (const category of categories) {
-    const categoryRepos = groups[category];
-    if (!categoryRepos || categoryRepos.length === 0) continue;
+    // 2. Integrations
+    let descHtml = description;
+    if (integrations && integrations.length > 0) {
+      const links = integrations.map((d) => `<a href="${d.url}">${d.name}</a>`).join(', ');
+      descHtml += `<br/><br/><strong>Integrates with:</strong> ${links}`;
+    }
 
-    html += `### ${category}\n\n`;
-    html += `<table width="100%">\n`;
+    // 3. Badges (Render from JSON data)
+    // We construct the HTML from the badge objects.
+    const badgesHtml = badges
+      .map((b) => `<a href="${b.url}"><img src="${b.image}" alt="${b.label}" /></a>`)
+      .join(' ');
 
-    for (let i = 0; i < categoryRepos.length; i++) {
-      const repo = categoryRepos[i];
-      const isEven = i % 2 === 0;
+    // 4. Layout Logic
+    const indentStyle = isChild ? 'padding-left: 40px;' : '';
+    const logoHeight = isChild ? '50' : '80';
+    const logoMaxWidth = isChild ? '100px' : '160px';
+    const rowStyle = isChild ? 'background-color: rgba(0,0,0,0.02);' : '';
 
-      // Logo assumption
-      const logoUrl = `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/nonelogo.png`;
-
-      // Tags
-      const tags = [
-        ...(repo.topics || []),
-        /* v8 ignore start */
-        ...(repo.stack?.frameworks || []),
-        /* v8 ignore stop */
-      ]
-        .slice(0, 4)
-        .map((t) => `<code>${t}</code>`)
-        .join(' ');
-
-      let descHtml = repo.description || 'No description provided.';
-      if (repo.stack?.internalDependencies && repo.stack.internalDependencies.length > 0) {
-        const links = repo.stack.internalDependencies
-          .map((d) => `<a href="https://github.com/${repo.owner.login}/${d}">${d}</a>`)
-          .join(', ');
-        descHtml += `<br/><br/><strong>Integrates with:</strong> ${links}`;
-      }
-
-      html += `<tr style="border-bottom: none;">
-<td width="20%" align="center" valign="middle" style="border-right: 1px solid #eee;">
-  <a href="${repo.html_url}">
-    <img src="${logoUrl}" height="80" style="max-width: 160px; padding: 10px;" alt="${repo.name} Logo" />
+    html += `<tr style="border-bottom: none; ${rowStyle}">
+<td width="20%" align="center" valign="middle" style="border-right: 1px solid #eee; ${indentStyle}">
+  <a href="${html_url}">
+    <img src="${logoUrl}" height="${logoHeight}" style="max-width: ${logoMaxWidth}; padding: 10px;" alt="${name} Logo" />
   </a>
 </td>
 <td width="80%" align="left" valign="top">
-  ${generateBadges(repo)}
+  ${badgesHtml}
   <p align="center">
-    <strong>${repo.name}</strong>
+    <strong>${name}</strong>
     <br />
     ${descHtml}
   </p>
-  <p align="center">${tags}</p>
+  <p align="center">${tagsHtml}</p>
 </td>
 </tr>`;
-    }
-    html += `</table>\n\n`;
   }
 
+  html += `</table>\n`;
   return html;
 }

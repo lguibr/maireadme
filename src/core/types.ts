@@ -24,6 +24,22 @@ export interface RepoStack {
    * Internal dependencies detected within the user's ecosystem.
    */
   internalDependencies?: string[];
+  /**
+   * Detected logo URL from README.
+   */
+  logoUrl?: string;
+  /**
+   * Detected Cocov badge URL from README.
+   */
+  cocovBadgeUrl?: string;
+  /**
+   * Indicates if CI/CD is detected (e.g., GitHub Actions, Travis CI).
+   */
+  hasCI?: boolean;
+  /**
+   * All badges extracted from the README.
+   */
+  extractedBadges?: { image: string; url?: string; alt?: string }[];
 }
 
 /**
@@ -38,4 +54,8 @@ export interface EnhancedRepo extends GithubRepo {
    * Categorization group for the README.
    */
   category?: string;
+  /**
+   * Detected logo URL from README.
+   */
+  logoUrl?: string;
 }

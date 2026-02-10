@@ -34,6 +34,9 @@ export async function interactiveSelection(repos: EnhancedRepo[]): Promise<Enhan
     const needsInput = !desc || desc.trim() === '' || desc === repo.name;
 
     if (needsInput) {
+      // For now, skip prompting to allow batch generation
+      repo.description = repo.description || 'No description provided.';
+      /*
       console.log(chalk.yellow(`\nMissing description for ${chalk.bold(repo.name)}`));
 
       const answer = await inquirer.prompt([
@@ -48,6 +51,7 @@ export async function interactiveSelection(repos: EnhancedRepo[]): Promise<Enhan
       if (answer.newDesc) {
         repo.description = answer.newDesc;
       }
+      */
     }
     finalRepos.push(repo);
   }

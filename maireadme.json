@@ -1,0 +1,1093 @@
+{
+  "projects": [
+    {
+      "name": "commitai",
+      "description": "A CLI tool that streamlines Git workflows by analyzing diffs to craft semantic commit messages. Supports multiple AI providers, custom templates, and pre-commit hooks.",
+      "html_url": "https://github.com/lguibr/commitai",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/commitai/main/bitmap.png",
+      "tags": [
+        "ai",
+        "automation",
+        "cli",
+        "devtools",
+        "gemini",
+        "git",
+        "git-workflow",
+        "git-workflow-automation",
+        "llm",
+        "python",
+        "Python"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "CI and Publish",
+          "image": "https://github.com/lguibr/commitai/actions/workflows/main.yml/badge.svg",
+          "url": "https://github.com/lguibr/commitai/actions/workflows/main.yml"
+        },
+        {
+          "label": "codecov",
+          "image": "https://codecov.io/gh/lguibr/commitai/graph/badge.svg?token=MXZKCXO6LA",
+          "url": "https://codecov.io/gh/lguibr/commitai"
+        },
+        {
+          "label": "PyPI",
+          "image": "https://img.shields.io/pypi/v/CommitAi.svg",
+          "url": "https://pypi.org/project/CommitAi/"
+        },
+        {
+          "label": "Python Version",
+          "image": "https://img.shields.io/pypi/pyversions/CommitAi.svg",
+          "url": "https://pypi.org/project/CommitAi/"
+        },
+        {
+          "label": "License",
+          "image": "https://img.shields.io/pypi/l/CommitAi.svg",
+          "url": "https://github.com/lguibr/CommitAi/blob/main/LICENSE"
+        },
+        {
+          "label": "Ruff",
+          "image": "https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json",
+          "url": "https://github.com/astral-sh/ruff"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/commitai",
+          "image": "https://img.shields.io/github/stars/lguibr/commitai?style=social"
+        },
+        {
+          "label": "CI",
+          "url": "https://github.com/lguibr/commitai/actions",
+          "image": "https://github.com/lguibr/commitai/actions/workflows/ci.yml/badge.svg"
+        }
+      ]
+    },
+    {
+      "name": "Mimeflow",
+      "description": "A React-based pose estimation engine. Uses WebGL/WebGPU and 5D vector cosine similarity to calculate movement accuracy against video feeds entirely in the browser.",
+      "html_url": "https://github.com/lguibr/Mimeflow",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/Mimeflow/main/bitmap.png",
+      "tags": [
+        "blazepose",
+        "computer-vision",
+        "fitness",
+        "game-development",
+        "gamification",
+        "machine-learning",
+        "mediapipe",
+        "pose-estimation",
+        "pwa",
+        "react",
+        "tensorflowjs",
+        "vite"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/Mimeflow",
+          "image": "https://img.shields.io/github/stars/lguibr/Mimeflow?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/Mimeflow",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/Mimeflow",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "pongo",
+      "description": "A real-time, 4-player hybrid of Pong and Breakout. Built with Go and WebSockets, powered by a custom Actor Model architecture (Bollywood) for high concurrency and scalable game state management.",
+      "html_url": "https://github.com/lguibr/pongo",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/pongo/main/bitmap.png",
+      "tags": [
+        "actor-model",
+        "breakout",
+        "concurrency",
+        "game-development",
+        "go",
+        "golang",
+        "multiplayer",
+        "online-game",
+        "physics-engine",
+        "pong",
+        "real-time",
+        "websockets"
+      ],
+      "integrations": [
+        {
+          "name": "asciiring",
+          "url": "https://github.com/lguibr/asciiring"
+        },
+        {
+          "name": "bollywood",
+          "url": "https://github.com/lguibr/bollywood"
+        }
+      ],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Coverage",
+          "image": "https://img.shields.io/badge/Coverage-49.9%25-yellow",
+          "url": "#"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/pongo",
+          "image": "https://img.shields.io/github/stars/lguibr/pongo?style=social"
+        },
+        {
+          "label": "CI",
+          "url": "https://github.com/lguibr/pongo/actions",
+          "image": "https://github.com/lguibr/pongo/actions/workflows/ci.yml/badge.svg"
+        }
+      ]
+    },
+    {
+      "name": "luisguilher.me",
+      "description": "A portfolio built with systems thinking. Simulates an OS/IDE environment with a custom virtual file system, Monaco Editor integration, and stateful window layouts. Browsable, interactive, and built with Next.js.",
+      "html_url": "https://github.com/lguibr/luisguilher.me",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/tonai/main/public/logo.png",
+      "tags": [
+        "ide",
+        "interactive-resume",
+        "monaco-editor",
+        "nextjs",
+        "portifolio",
+        "react",
+        "system-design",
+        "typescript",
+        "virtual-file-system",
+        "vscode-clone",
+        "Next.js",
+        "React"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/luisguilher.me",
+          "image": "https://img.shields.io/github/stars/lguibr/luisguilher.me?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/luisguilher.me",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/luisguilher.me",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "CodeConcat",
+      "description": "Prepare your code for AI. Concatenates your project into a clean, markdown-formatted file with file trees and granular filtering options.",
+      "html_url": "https://github.com/lguibr/CodeConcat",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/CodeConcat/main/bitmap.png",
+      "tags": [
+        "automation",
+        "cli",
+        "concatenation",
+        "context-window",
+        "developer-tools",
+        "llm",
+        "productivity",
+        "prompt-engineering",
+        "python",
+        "Python"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "CI/CD",
+          "image": "https://github.com/lguibr/codeconcat/actions/workflows/ci_cd.yml/badge.svg",
+          "url": "https://github.com/lguibr/codeconcat/actions/workflows/ci_cd.yml"
+        },
+        {
+          "label": "PyPI",
+          "image": "https://img.shields.io/pypi/v/codeconcat.svg",
+          "url": "https://pypi.org/project/codeconcat/"
+        },
+        {
+          "label": "Python Version",
+          "image": "https://img.shields.io/pypi/pyversions/codeconcat.svg",
+          "url": "https://pypi.org/project/codeconcat/"
+        },
+        {
+          "label": "License",
+          "image": "https://img.shields.io/pypi/l/codeconcat.svg",
+          "url": "https://github.com/lguibr/codeconcat/blob/main/LICENSE"
+        },
+        {
+          "label": "Code style: ruff",
+          "image": "https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json",
+          "url": "https://github.com/astral-sh/ruff"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/CodeConcat",
+          "image": "https://img.shields.io/github/stars/lguibr/CodeConcat?style=social"
+        }
+      ]
+    },
+    {
+      "name": "alphatriangle",
+      "description": "An AlphaZero-style AI agent for a custom triangle puzzle game. Features distributed self-play with Ray, a C++ MCTS core, and a PyTorch neural network. Includes async logging via MLflow & TensorBoard.",
+      "html_url": "https://github.com/lguibr/alphatriangle",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/alphatriangle/main/bitmap.png",
+      "tags": [
+        "ai",
+        "alphazero",
+        "cpp",
+        "machine-learning",
+        "mcts",
+        "mlflow",
+        "puzzle-game",
+        "python",
+        "pytorch",
+        "ray",
+        "reinforcement-learning",
+        "self-play"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "CI/CD Status",
+          "image": "https://github.com/lguibr/alphatriangle/actions/workflows/ci_cd.yml/badge.svg",
+          "url": "https://github.com/lguibr/alphatriangle/actions/workflows/ci_cd.yml"
+        },
+        {
+          "label": "codecov",
+          "image": "https://codecov.io/gh/lguibr/alphatriangle/graph/badge.svg?token=YOUR_CODECOV_TOKEN_HERE",
+          "url": "https://codecov.io/gh/lguibr/alphatriangle"
+        },
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-yellow.svg",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "label": "Python Version",
+          "image": "https://img.shields.io/badge/python-3.10+-blue.svg",
+          "url": "https://www.python.org/downloads/"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/alphatriangle",
+          "image": "https://img.shields.io/github/stars/lguibr/alphatriangle?style=social"
+        }
+      ]
+    },
+    {
+      "name": "terraplain",
+      "description": "A bootstrap to API with automated provisioning of cloud resources in Google Cloud Platform using Terraform CDK in Typescript.",
+      "html_url": "https://github.com/lguibr/terraplain",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/terraplain/main/bitmap.png",
+      "tags": [],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/terraplain",
+          "image": "https://img.shields.io/github/stars/lguibr/terraplain?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/terraplain",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/terraplain",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "asciiring",
+      "description": "A zero-dependency Golang library for rendering ASCII art from images and text. Lightweight, modular, and easy to integrate.",
+      "html_url": "https://github.com/lguibr/asciiring",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/asciiring/main/bitmap.png",
+      "tags": [
+        "ascii-art",
+        "go",
+        "golang",
+        "image-processing",
+        "image-to-ascii",
+        "library",
+        "rendering",
+        "terminal-graphics",
+        "text-to-image",
+        "zero-dependency",
+        "Go"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/asciiring",
+          "image": "https://img.shields.io/github/stars/lguibr/asciiring?style=social"
+        }
+      ]
+    },
+    {
+      "name": "wolfram-physics-explorer",
+      "description": "A high-performance 3D visualization engine for the Wolfram Physics Project. Features GPU-accelerated graph rewriting, interactive force-directed layouts, and a custom rule playground. Built with React, Three.js, and Web Workers.",
+      "html_url": "https://github.com/lguibr/wolfram-physics-explorer",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/wolfram-physics-explorer/main/public/logo.png",
+      "tags": [
+        "complex-systems",
+        "d3-force",
+        "emergent-behavior",
+        "graph-theory",
+        "physics-simulation",
+        "react",
+        "threejs",
+        "typescript",
+        "visualization",
+        "web-worker",
+        "webgl",
+        "wolfram-physics"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "TypeScript",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
+          "url": "#"
+        },
+        {
+          "label": "React",
+          "image": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+          "url": "#"
+        },
+        {
+          "label": "Three.js",
+          "image": "https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white",
+          "url": "#"
+        },
+        {
+          "label": "Vitest",
+          "image": "https://img.shields.io/badge/Vitest-Coverage_60%25-green?style=for-the-badge",
+          "url": "#"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/wolfram-physics-explorer",
+          "image": "https://img.shields.io/github/stars/lguibr/wolfram-physics-explorer?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/wolfram-physics-explorer",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/wolfram-physics-explorer",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "bollywood",
+      "description": "A lightweight Actor Model implementation for Go. Features asynchronous message passing, synchronous request-reply (Ask), and state encapsulation with minimal locking.",
+      "html_url": "https://github.com/lguibr/bollywood",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/bollywood/main/bitmap.png",
+      "tags": [
+        "actor-model",
+        "actors",
+        "concurrency",
+        "go",
+        "golang",
+        "goroutines",
+        "library",
+        "message-passing",
+        "parallelism",
+        "Go"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Go Test",
+          "image": "https://github.com/lguibr/bollywood/actions/workflows/test.yml/badge.svg",
+          "url": "https://github.com/lguibr/bollywood/actions/workflows/test.yml"
+        },
+        {
+          "label": "Go Report Card",
+          "image": "https://goreportcard.com/badge/github.com/lguibr/bollywood",
+          "url": "https://goreportcard.com/report/github.com/lguibr/bollywood"
+        },
+        {
+          "label": "Go Reference",
+          "image": "https://pkg.go.dev/badge/github.com/lguibr/bollywood.svg",
+          "url": "https://pkg.go.dev/github.com/lguibr/bollywood"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/bollywood",
+          "image": "https://img.shields.io/github/stars/lguibr/bollywood?style=social"
+        },
+        {
+          "label": "CI",
+          "url": "https://github.com/lguibr/bollywood/actions",
+          "image": "https://github.com/lguibr/bollywood/actions/workflows/ci.yml/badge.svg"
+        }
+      ]
+    },
+    {
+      "name": "pongo-client",
+      "description": "The 3D web client for PonGo. Built with React, Vite, and React Three Fiber (R3F). Features real-time WebSocket state synchronization, player-relative scene rotation, and high-performance WebGL rendering.",
+      "html_url": "https://github.com/lguibr/pongo-client",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/pongo-client/main/bitmap.png",
+      "tags": [
+        "front-end",
+        "game-development",
+        "r3f",
+        "react",
+        "react-three-fiber",
+        "real-time",
+        "threejs",
+        "typescript",
+        "vite",
+        "webgl",
+        "websockets",
+        "React"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/pongo-client",
+          "image": "https://img.shields.io/github/stars/lguibr/pongo-client?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/pongo-client",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/pongo-client",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "maireadme",
+      "description": "The Ultimate GitHub Profile README Generator. An intelligent CLI tool that analyzes your repositories, detects tech stacks, categorizes projects, and renders a high-fidelity Markdown dashboard with Shields.io badges.",
+      "html_url": "https://github.com/lguibr/maireadme",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/maireadme/main/src/logo.png",
+      "tags": [
+        "automation",
+        "cli",
+        "developer-tools",
+        "github-profile",
+        "introspection",
+        "personal-branding",
+        "readme-generator",
+        "shieldsio",
+        "typescript"
+      ],
+      "integrations": [
+        {
+          "name": "cocov",
+          "url": "https://github.com/lguibr/cocov"
+        }
+      ],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "TypeScript",
+          "image": "https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white",
+          "url": "https://www.typescriptlang.org/"
+        },
+        {
+          "label": "Vitest",
+          "image": "https://img.shields.io/badge/Tested%20with-Vitest-success?logo=vitest&logoColor=white",
+          "url": "https://vitest.dev/"
+        },
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-yellow.svg",
+          "url": "./LICENSE"
+        },
+        {
+          "label": "PRs Welcome",
+          "image": "https://img.shields.io/badge/PRs-welcome-brightgreen.svg",
+          "url": "#"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/maireadme",
+          "image": "https://img.shields.io/github/stars/lguibr/maireadme?style=social"
+        },
+        {
+          "label": "CI",
+          "url": "https://github.com/lguibr/maireadme/actions",
+          "image": "https://github.com/lguibr/maireadme/actions/workflows/ci.yml/badge.svg"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/maireadme",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/maireadme",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "n0ne-client",
+      "description": "The reactive visual interface for the n0ne workflow engine. A high-performance, zero-config graph editor built with React Flow, Apollo GraphQL, and TypeScript. \"n0ne of the complexity.\"",
+      "html_url": "https://github.com/lguibr/n0ne-client",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/n0ne-client/main/public/nonelogo.png",
+      "tags": [
+        "apollo-client",
+        "chakra-ui",
+        "low-code",
+        "n8n-alternative",
+        "react",
+        "react-fl",
+        "typ",
+        "vite",
+        "workflow-automation",
+        "zustand",
+        "React"
+      ],
+      "integrations": [
+        {
+          "name": "cocov",
+          "url": "https://github.com/lguibr/cocov"
+        }
+      ],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Frontend Lint",
+          "image": "https://github.com/lguibr/n0ne-client/actions/workflows/ci.yml/badge.svg",
+          "url": "https://github.com/lguibr/n0ne-client/actions"
+        },
+        {
+          "label": "Frontend Test",
+          "image": "https://github.com/lguibr/n0ne-client/actions/workflows/ci.yml/badge.svg",
+          "url": "https://github.com/lguibr/n0ne-client/actions"
+        },
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/n0ne-client",
+          "image": "https://img.shields.io/github/stars/lguibr/n0ne-client?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/n0ne-client",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/n0ne-client",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "n0ne-server",
+      "description": "The intelligent backend for the n0ne platform. Orchestrates agentic AI workflows by bridging Strapi 5 content management with the LangChain/LangGraph execution engine.",
+      "html_url": "https://github.com/lguibr/n0ne-server",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/n0ne-server/main/public/nonelogo.png",
+      "tags": [
+        "ai-agents",
+        "backend",
+        "generative-ai",
+        "graphql",
+        "headless",
+        "langchain",
+        "langgra",
+        "sqlite",
+        "strapi",
+        "strapi-v5",
+        "typescript",
+        "workflow-orchestration"
+      ],
+      "integrations": [
+        {
+          "name": "cocov",
+          "url": "https://github.com/lguibr/cocov"
+        }
+      ],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Backend Lint",
+          "image": "https://github.com/lguibr/n0ne-server/actions/workflows/ci.yml/badge.svg",
+          "url": "https://github.com/lguibr/n0ne-server/actions"
+        },
+        {
+          "label": "Backend Test",
+          "image": "https://github.com/lguibr/n0ne-server/actions/workflows/ci.yml/badge.svg",
+          "url": "https://github.com/lguibr/n0ne-server/actions"
+        },
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/n0ne-server",
+          "image": "https://img.shields.io/github/stars/lguibr/n0ne-server?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/n0ne-server",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/n0ne-server",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "cocov",
+      "description": "A Compliance Engine for code coverage. Enforces strict baselines, blocks regressions via git hooks (Husky), and auto-generates audit-ready reports and SVG badges. Compatible with Jest and Vitest.",
+      "html_url": "https://github.com/lguibr/cocov",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/cocov/main/assets/logo.png",
+      "tags": [
+        "badges",
+        "cli",
+        "code-coverage",
+        "compliance",
+        "devops",
+        "husky",
+        "jest",
+        "npm-package",
+        "quality-assurance",
+        "regression-testing",
+        "testing",
+        "vitest"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "License",
+          "image": "https://img.shields.io/badge/license-MIT-blue.svg",
+          "url": "#"
+        },
+        {
+          "label": "Version",
+          "image": "https://img.shields.io/badge/version-3.3.0-purple.svg",
+          "url": "#"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/cocov",
+          "image": "https://img.shields.io/github/stars/lguibr/cocov?style=social"
+        },
+        {
+          "label": "CI",
+          "url": "https://github.com/lguibr/cocov/actions",
+          "image": "https://github.com/lguibr/cocov/actions/workflows/ci.yml/badge.svg"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/cocov",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/cocov",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "tricrack",
+      "description": "The Hexagonal Triangle Puzzle Extravaganza! A mind-bending PWA game where you drag, drop, and clear lines on a hex grid. Built with Next.js, TypeScript, and Styled Components.",
+      "html_url": "https://github.com/lguibr/tricrack",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/tricrack/main/bitmap.png",
+      "tags": [
+        "game",
+        "hexagonal-grids",
+        "mobile-friendly",
+        "nextjs",
+        "offline-first",
+        "progressive-web-app",
+        "pwa",
+        "react",
+        "styled-components",
+        "typescript",
+        "Next.js",
+        "React"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-yellow.svg",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "label": "Next.js",
+          "image": "https://img.shields.io/badge/Next.js-14.2.3-blue?logo=nextdotjs",
+          "url": "https://nextjs.org/"
+        },
+        {
+          "label": "React",
+          "image": "https://img.shields.io/badge/React-18-blue?logo=react",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "label": "TypeScript",
+          "image": "https://img.shields.io/badge/TypeScript-5-blue?logo=typescript",
+          "url": "https://www.typescriptlang.org/"
+        },
+        {
+          "label": "Styled Components",
+          "image": "https://img.shields.io/badge/Styled_Components-6.1.11-db7093?logo=styled-components",
+          "url": "https://styled-components.com/"
+        },
+        {
+          "label": "PWA",
+          "image": "https://img.shields.io/badge/PWA-Ready-purple?logo=pwa",
+          "url": "https://web.dev/progressive-web-apps/"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/tricrack",
+          "image": "https://img.shields.io/github/stars/lguibr/tricrack?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/tricrack",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/tricrack",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "timing",
+      "description": "A developer-first Python performance timer. Features targeted profiling, structured tagging, local SQLite logging, and interactive HTML dashboards (Gantt/Sunburst). Zero runtime overhead when disabled.",
+      "html_url": "https://github.com/lguibr/timing",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/timing/main/logo.png",
+      "tags": [
+        "benchmark",
+        "cli",
+        "developer-tools",
+        "gantt-chart",
+        "instrumentation",
+        "optimization",
+        "perfomance",
+        "profiling",
+        "python",
+        "sqlite",
+        "visualization",
+        "Python"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "PyPI Version",
+          "image": "https://img.shields.io/pypi/v/tmng.svg?style=flat-square&logo=pypi&logoColor=white",
+          "url": "https://pypi.org/project/tmng/"
+        },
+        {
+          "label": "Python Versions",
+          "image": "https://img.shields.io/pypi/pyversions/tmng.svg?style=flat-square&logo=python&logoColor=white",
+          "url": "#"
+        },
+        {
+          "label": "CI Status",
+          "image": "https://img.shields.io/github/actions/workflow/status/lguibr/timing/.github/workflows/python-publish.yml?branch=main&style=flat-square&logo=github",
+          "url": "https://github.com/lguibr/timing/actions/workflows/python-publish.yml"
+        },
+        {
+          "label": "License",
+          "image": "https://img.shields.io/pypi/l/tmng.svg?style=flat-square",
+          "url": "https://github.com/lguibr/timing/blob/main/LICENSE"
+        },
+        {
+          "label": "Code Style: ruff",
+          "image": "https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json&style=flat-square",
+          "url": "https://github.com/astral-sh/ruff"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/timing",
+          "image": "https://img.shields.io/github/stars/lguibr/timing?style=social"
+        }
+      ]
+    },
+    {
+      "name": "fin",
+      "description": "Plan your financial future with intelligent projections and scenario modeling. An offline-first React application featuring multi-scenario analysis, investment tracking, and interactive wealth visualization.",
+      "html_url": "https://github.com/lguibr/fin",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/fin/main/public/logo.png",
+      "tags": [
+        "finance",
+        "financial-planning",
+        "indexdb",
+        "investment-tracker",
+        "offline-first",
+        "react",
+        "recharts",
+        "tailwindcss",
+        "typescript",
+        "visualization",
+        "wealth-management",
+        "React"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-blue.svg",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "label": "TypeScript",
+          "image": "https://img.shields.io/badge/TypeScript-5.8-blue",
+          "url": "https://www.typescriptlang.org/"
+        },
+        {
+          "label": "React",
+          "image": "https://img.shields.io/badge/React-19.2-61dafb",
+          "url": "https://react.dev/"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/fin",
+          "image": "https://img.shields.io/github/stars/lguibr/fin?style=social"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/fin",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "tonai",
+      "description": "Create and visualize music from text. A web-based AI synth workstation powered by Google Gemini and Tone.js. Features real-time code generation, a Monaco editor, and instant playback.",
+      "html_url": "https://github.com/lguibr/tonai",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/tonai/main/public/logo.png",
+      "tags": [
+        "ai",
+        "audio-synthesis",
+        "gemini-api",
+        "generative-art",
+        "music-generation",
+        "react",
+        "text-to-music",
+        "tonejs",
+        "typescript",
+        "vite",
+        "web-audio-api",
+        "React"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/tonai",
+          "image": "https://img.shields.io/github/stars/lguibr/tonai?style=social"
+        },
+        {
+          "label": "ESLint",
+          "url": "https://github.com/lguibr/tonai",
+          "image": "https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white"
+        },
+        {
+          "label": "TypeScript",
+          "url": "https://github.com/lguibr/tonai",
+          "image": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+        }
+      ]
+    },
+    {
+      "name": "trieye",
+      "description": "Asynchronous experiment management for Ray. A dedicated Actor for non-blocking metrics collection, artifact persistence, and logging (MLflow/TensorBoard) in distributed ML training.",
+      "html_url": "https://github.com/lguibr/trieye",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/trieye/main/bitmap.png",
+      "tags": [
+        "asynchronous",
+        "distributed-computing",
+        "experiment-tracking",
+        "logging",
+        "machine-learning",
+        "mlflow",
+        "mlops",
+        "python",
+        "ray",
+        "ray-actors",
+        "tensoboard",
+        "Python"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "CI Status",
+          "image": "https://github.com/lguibr/trieye/actions/workflows/ci_cd.yml/badge.svg",
+          "url": "https://github.com/lguibr/trieye/actions/workflows/ci_cd.yml"
+        },
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-yellow.svg",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "label": "Python Version",
+          "image": "https://img.shields.io/badge/python-3.10+-blue.svg",
+          "url": "https://www.python.org/downloads/"
+        },
+        {
+          "label": "codecov",
+          "image": "https://codecov.io/gh/lguibr/trieye/graph/badge.svg?token=YOUR_CODECOV_TOKEN",
+          "url": "https://codecov.io/gh/lguibr/trieye"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/trieye",
+          "image": "https://img.shields.io/github/stars/lguibr/trieye?style=social"
+        }
+      ]
+    },
+    {
+      "name": "trimcts",
+      "description": "High-performance C++ implementation of Monte Carlo Tree Search (MCTS) with Python bindings. Supports AlphaZero and MuZero paradigms, featuring batched network evaluation and efficient tree reuse.",
+      "html_url": "https://github.com/lguibr/trimcts",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/trimcts/main/bitmap.png",
+      "tags": [
+        "alphazero",
+        "cpp",
+        "game-ai",
+        "library",
+        "mcts",
+        "monte-carlo-tree-search",
+        "muzero",
+        "pybind11",
+        "python",
+        "reinforcement-learning",
+        "search-algorithm",
+        "Python"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "CI",
+          "image": "https://github.com/lguibr/trimcts/actions/workflows/ci_cd.yml/badge.svg",
+          "url": "https://github.com/lguibr/trimcts/actions"
+        },
+        {
+          "label": "PyPI",
+          "image": "https://img.shields.io/pypi/v/trimcts.svg",
+          "url": "https://pypi.org/project/trimcts/"
+        },
+        {
+          "label": "Coverage Status",
+          "image": "https://codecov.io/gh/lguibr/trimcts/graph/badge.svg?token=YOUR_CODECOV_TOKEN_HERE",
+          "url": "https://codecov.io/gh/lguibr/trimcts"
+        },
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-yellow.svg",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "label": "Python Version",
+          "image": "https://img.shields.io/badge/python-3.10+-blue.svg",
+          "url": "https://www.python.org/downloads/"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/trimcts",
+          "image": "https://img.shields.io/github/stars/lguibr/trimcts?style=social"
+        }
+      ]
+    },
+    {
+      "name": "trianglengin",
+      "description": "The core logic for the Triangle Puzzle game. Features a fast C++ backend, Pybind11 wrappers, and a Python API designed for AI/ML development and simulation.",
+      "html_url": "https://github.com/lguibr/trianglengin",
+      "logoUrl": "https://raw.githubusercontent.com/lguibr/trianglengin/main/bitmap.png",
+      "tags": [
+        "c-plus-plus",
+        "cpp",
+        "game-engine",
+        "library",
+        "performance",
+        "puzzle-game",
+        "pybind11",
+        "pygame",
+        "python",
+        "reinforcement-learning",
+        "rl",
+        "Python"
+      ],
+      "integrations": [],
+      "isChild": false,
+      "badges": [
+        {
+          "label": "CI Status",
+          "image": "https://github.com/lguibr/trianglengin/actions/workflows/ci_cd.yml/badge.svg",
+          "url": "https://github.com/lguibr/trianglengin/actions/workflows/ci_cd.yml"
+        },
+        {
+          "label": "codecov",
+          "image": "https://codecov.io/gh/lguibr/trianglengin/graph/badge.svg?token=YOUR_CODECOV_TOKEN_HERE&flag=trianglengin",
+          "url": "https://codecov.io/gh/lguibr/trianglengin"
+        },
+        {
+          "label": "License: MIT",
+          "image": "https://img.shields.io/badge/License-MIT-yellow.svg",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "label": "Python Version",
+          "image": "https://img.shields.io/badge/python-3.10+-blue.svg",
+          "url": "https://www.python.org/downloads/"
+        },
+        {
+          "label": "Stars",
+          "url": "https://github.com/lguibr/trianglengin",
+          "image": "https://img.shields.io/github/stars/lguibr/trianglengin?style=social"
+        }
+      ]
+    }
+  ]
+}

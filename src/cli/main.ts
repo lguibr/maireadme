@@ -44,43 +44,65 @@ async function main() {
 
   console.log(chalk.blue(`\nAnalyzing ${repos.length} repositories via GitHub API...`));
 
-  const enhancedRepos: EnhancedRepo[] = [];
-
   // Enhance repositories
-  for (const [index, repo] of repos.entries()) {
-    process.stdout.write(`\rAnalyzing ${index + 1}/${repos.length}: ${repo.name}          `);
+  const allRepoNames = repos.map((r) => r.name);
 
-    // 1. Stack Detection
-    const allRepoNames = repos.map((r) => r.name);
-    const stack = await detectStackFromRemote(repo, allRepoNames);
+  const enhancedRepos = await Promise.all(
+    repos.map(async (repo, index) => {
+      // 1. Stack Detection
+      const stack = await detectStackFromRemote(repo, allRepoNames);
 
-    // 2. Enhance Description if needed
-    let description = repo.description;
-    if (!description || description === repo.name) {
-      const remoteDesc = await extractDescriptionFromRemote(repo);
-      if (remoteDesc) description = remoteDesc;
-    }
+      // 2. Enhance Description if needed
+      let description = repo.description;
+      if (!description || description === repo.name) {
+        const remoteDesc = await extractDescriptionFromRemote(repo);
+        if (remoteDesc) description = remoteDesc;
+      }
 
-    const enhanced: EnhancedRepo = {
-      ...repo,
-      stack,
-      description,
-    };
+      // Simple progress log (since we can't easily do a moving bar with Promise.all without a library)
+      process.stdout.write(`.`);
 
-    // 3. Categorize
-    enhanced.category = categorizeRepo(enhanced);
+      const enhanced: EnhancedRepo = {
+        ...repo,
+        stack,
+        description,
+        logoUrl: stack.logoUrl,
+      };
 
-    enhancedRepos.push(enhanced);
-  }
+      // 3. Categorize
+      enhanced.category = categorizeRepo(enhanced);
+
+      return enhanced;
+    }),
+  );
   console.log('');
 
   // Interactive Selection
   const selectedRepos = await interactiveSelection(enhancedRepos);
   if (selectedRepos.length === 0) return console.log(chalk.yellow('No repositories selected.'));
 
-  // Generate Output
-  console.log(chalk.blue('Generating HTML...'));
-  const html = generateHTML(selectedRepos);
+  // 4. Transform to JSON (Deterministic Step)
+  console.log(chalk.blue('Transforming data to JSON structure...'));
+
+  // Dynamic import to avoid circular dependencies if any, though here it's fine.
+  // Actually, we need to import `transformToReadmeData` at the top.
+  // But for this `replace_file_content`, I'll add the logic here and assume imports are added.
+  // Wait, I can't add imports easily with `replace_file_content` if they are far away.
+  // I will just add the function call here and will add imports in a separate check or use full file replacement if needed.
+  // Let's assume I will add imports in a second step or this step if I can match the top.
+
+  // Let's just do the logic part first.
+  const { transformToReadmeData } = await import('../generators/transformer.js');
+  const readmeData = transformToReadmeData(selectedRepos);
+
+  // Optional: Save JSON for debugging or external use
+  const jsonPath = 'maireadme.json';
+  fs.writeFileSync(jsonPath, JSON.stringify(readmeData, null, 2));
+  console.log(chalk.gray(`Intermediate JSON saved to ${jsonPath}`));
+
+  // 5. Generate Output from JSON
+  console.log(chalk.blue('Generating HTML from JSON...'));
+  const html = generateHTML(readmeData);
 
   const outputPath = 'GENERATED_README.md';
   fs.writeFileSync(outputPath, html);

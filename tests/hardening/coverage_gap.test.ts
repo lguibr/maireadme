@@ -15,6 +15,7 @@ describe('Hardening: Coverage Gaps', () => {
     stargazers_count: 0,
     language: null,
     topics: [],
+    default_branch: 'main',
   };
 
   beforeEach(() => {
@@ -101,14 +102,16 @@ This is a very real description that is definitely longer than twenty characters
 
   it('readme should format tags correctly', async () => {
     const { generateHTML } = await import('../../src/generators/readme.js');
-    const repo = {
-      ...mockRepo,
-      category: 'Other Experiments',
-      topics: ['t1', 't2'],
-      stack: { frameworks: ['f1'] },
-    } as any;
+    const project = {
+      name: 'gap-repo',
+      description: 'Desc',
+      html_url: 'https://github.com/u/gap-repo',
+      tags: ['t1', 'f1'],
+      badges: [],
+      isChild: false,
+    };
 
-    const html = generateHTML([repo]);
+    const html = generateHTML({ projects: [project] });
     expect(html).toContain('<code>t1</code>');
     expect(html).toContain('<code>f1</code>');
   });

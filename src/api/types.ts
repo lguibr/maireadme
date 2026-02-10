@@ -8,6 +8,7 @@ export interface GithubRepo {
   stargazers_count: number;
   language: string | null;
   topics: string[];
+  default_branch: string;
   owner: {
     login: string;
   };

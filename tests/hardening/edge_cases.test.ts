@@ -13,6 +13,7 @@ describe('Hardening: Edge Cases', () => {
     stargazers_count: 0,
     language: null,
     topics: [],
+    default_branch: 'main',
   };
 
   beforeEach(() => {
