@@ -2,10 +2,12 @@ import { describe, it, expect } from 'vitest';
 import { generateHTML } from '../../src/generators/readme.js';
 
 describe('README Generator', () => {
-  it('should generate empty HTML for no repos', () => {
+  it('should generate empty HTML with typing header for no repos', () => {
     const html = generateHTML({ projects: [] });
-    // The generator creates a table wrapper even if empty
-    expect(html).toBe('<table width="100%">\n</table>\n');
+    // Expect the Typing SVG with "Scanning 0 Repositories..."
+    expect(html).toContain('Scanning%200%20Repositories');
+    expect(html).toContain('Gemini%201.5%20Pro');
+    expect(html).toContain('<table width="100%">\n</table>\n');
   });
 
   it('should group repositories by category', () => {
