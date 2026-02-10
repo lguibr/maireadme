@@ -13,7 +13,7 @@
 
 [![Lines](https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/lines-100.svg)](https://github.com/lguibr/cocov) [![Statements](https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/statements-100.svg)](https://github.com/lguibr/cocov) [![Functions](https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/functions-100.svg)](https://github.com/lguibr/cocov) [![Branches](https://raw.githubusercontent.com/lguibr/cocov/main/assets/badges/branches-100.svg)](https://github.com/lguibr/cocov)
 
-<!-- COCOV_BADGES_END -->](./CONTRIBUTING.md)
+<!-- COCOV_BADGES_END -->
 
 </div>
 
